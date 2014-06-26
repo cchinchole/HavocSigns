@@ -1,0 +1,5 @@
+name: Havoc_Signs
+author: Havoc
+version: 0.1
+description: Test signs
+main: havoc.havocsigns.havocsigns
