@@ -18,7 +18,6 @@ public void onSignCreate(SignChangeEvent sign){
 	if (sign.getLine(0).equalsIgnoreCase("<killme>")){
 		if (player.hasPermission("signs.killme") || Bukkit.getServer().getPlayer(player.getName()).isOp()){
 		player.sendMessage("LOLZ ok well bye :)");
-		//player.damage(10);
 		server.dispatchCommand(server.getConsoleSender(), "kill "+ player.getName());
 		sign.setLine(0, player.getName());
 		sign.setLine(1, "has been killed.");
@@ -33,11 +32,9 @@ public void onSignCreate(SignChangeEvent sign){
 	if (sign.getLine(0).equalsIgnoreCase("<vanish>")){
 		if (player.hasPermission("signs.vanish") || Bukkit.getServer().getPlayer(player.getName()).isOp()){
 		player.sendMessage("You hide in an unseeable fog...");
-		//player.damage(10);
-		//getServer().dispatchCommand(getServer().getConsoleSender(), "kill "+ player.getName());
 		player.hidePlayer(player);
 		sign.setLine(0, player.getName());
-		sign.setLine(1, "is hiding form you");
+		sign.setLine(1, "is hiding.");
 		}
 		else
 		{
